@@ -4,11 +4,11 @@ Quantile regression을 위한 loss function으로 Pinball loss를 많이 쓴다.
 
 어떻게 보면 평균 절대 오차(Mean absolute error)인 MAE에 quantile 만큼의 가중치를 부여한 loss function이라고 이해하였다. 수식은 아래와 같다.
 
-![image-20210107012633075](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210107012633075.png)
+![image](https://user-images.githubusercontent.com/33983084/103804878-199d7c80-5096-11eb-9818-60866fbb7d63.png)
 
 최종적으로 나오는 값은 무조건 양수이며, quantile 값에 따라 최종 loss 값에 가중치가 부여되며, 아래와 같이 0이하의 값에서는 overforecasting되고 0이상의 값에서는 underforcasting 된다.
 
-![image-20210107021222876](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210107021222876.png)
+![image](https://user-images.githubusercontent.com/33983084/103804821-08547000-5096-11eb-8714-6fdf61883120.png)
 
 TF implementation
 
