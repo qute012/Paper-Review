@@ -23,7 +23,7 @@ Fairseq의 논문을 확인해보면 LSTM 2x700과 Transformer를 실험에 사�
 
 ![image](https://user-images.githubusercontent.com/33983084/104135351-1f1aff80-53d3-11eb-96e2-310151ce68be.png)
 
-Full context model(FC)과 Left context model(LC)을 baseline으로 사용하는데, 아마 FC는 <pad>외에 별도의 마스킹을 하지않는 모델이고, LC는 time step마다 1씩 늘려가는 마스킹 기법인 듯 하다. 제안모델인 Y1과 Y2는 오른쪽 컨텍스트를 얼마만큼 사용할지에 따른 벤치마킹인데, Full에 비하면 실시간에서 성능차이가 크게 나지않고, 속도가 32초에서 가장 빠른것은 240ms까지 줄어든다.
+Full context model(FC)과 Left context model(LC)을 baseline으로 사용하는데, 아마 FC는 패드 토큰 외에 별도의 마스킹을 하지않는 모델이고, LC는 time step마다 1씩 늘려가는 마스킹 기법인 듯 하다. 제안모델인 Y1과 Y2는 오른쪽 컨텍스트를 얼마만큼 사용할지에 따른 벤치마킹인데, Full에 비하면 실시간에서 성능차이가 크게 나지않고, 속도가 32초에서 가장 빠른것은 240ms까지 줄어든다.
 
 ![image](https://user-images.githubusercontent.com/33983084/104135525-6655c000-53d4-11eb-9d63-4422ae672452.png)
 
