@@ -1,2 +1,2 @@
 ## paper-review
- This repository reviews papers from variety fields.
+ This repository reviews papers of variety fields.
