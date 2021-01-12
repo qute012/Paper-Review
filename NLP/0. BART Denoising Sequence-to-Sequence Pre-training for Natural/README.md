@@ -28,11 +28,13 @@ noise flexibility가 있어 origin text의 변환을 적용할 수 있음
 # Noise Task
 
 1. Token Masking
-   Bert와 똑같이 80% 확률로 mask 처리, 10%는 그대로 두고, 10%는 임의의 토큰으로 변형
-
+   
+Bert와 똑같이 80% 확률로 mask 처리, 10%는 그대로 두고, 10%는 임의의 토큰으로 변형
+   
 2. Token Deletion
-   토큰을 제거하여, model이 어느 자리의 토큰이 유실됐는지 결정해야 함
-
+   
+토큰을 제거하여, model이 어느 자리의 토큰이 유실됐는지 결정해야 함
+   
 3. Text Infilling
 
    성능이 가장 좋은 방법, 몇 개의 토큰을 마스킹 했는지 예측하도록함
@@ -41,8 +43,10 @@ noise flexibility가 있어 origin text의 변환을 적용할 수 있음
 ![image](https://user-images.githubusercontent.com/33983084/104291872-73230280-54ff-11eb-86a5-fb73ae26847f.png)
 
 4. Sentence Permutation
+   
    Sentence를 임의의 순서로 섞어준다.
 5. Document Rotation
+   
    임의로 Token을 선택하고 Document를 해당 Token으로 시작하도록 Rotate
 
 # Model Architecture
